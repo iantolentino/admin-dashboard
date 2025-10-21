@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Main</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+</head>
+<body>
+    <!-- Main Wrapper -->
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-brand">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>AdminKit</span>
+                </a>
+                <button class="btn btn-sm" id="sidebarToggle">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="sidebar-user">
+                    <img src="assets/img/user-avatar.jpg" alt="User" class="rounded-circle">
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                </div>
+                
+                <ul class="sidebar-nav">
+                    <li class="sidebar-item active">
+                        <a href="index.html" class="sidebar-link">
+                            <i class="bi bi-speedometer2"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="pages/users.html" class="sidebar-link">
+                            <i class="bi bi-people"></i>
+                            <span>Users</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="pages/analytics.html" class="sidebar-link">
+                            <i class="bi bi-graph-up"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="pages/projects.html" class="sidebar-link">
+                            <i class="bi bi-folder"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="pages/inbox.html" class="sidebar-link">
+                            <i class="bi bi-inbox"></i>
+                            <span>Inbox</span>
+                            <span class="badge bg-danger">5</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="pages/calendar.html" class="sidebar-link">
+                            <i class="bi bi-calendar"></i>
+                            <span>Calendar</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="pages/file-manager.html" class="sidebar-link">
+                            <i class="bi bi-files"></i>
+                            <span>File Manager</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="sidebar-footer">
+                    <div class="theme-switcher">
+                        <button class="btn btn-sm" id="darkModeToggle">
+                            <i class="bi bi-moon"></i>
+                            <span>Dark Mode</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Top Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-sm me-2 d-lg-none" id="mobileSidebarToggle">
+                            <i class="bi bi-list"></i>
+                        </button>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="navbar-nav ms-auto">
+                        <div class="nav-item dropdown">
+                            <a class="nav-link position-relative" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-bell"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    3
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <h6 class="dropdown-header">Notifications</h6>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6>New user registered</h6>
+                                        <small>5 min ago</small>
+                                    </div>
+                                    <p>John Doe joined the system</p>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6>Server alert</h6>
+                                        <small>15 min ago</small>
+                                    </div>
+                                    <p>CPU usage is high</p>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <img src="assets/img/user-avatar.jpg" alt="User" class="rounded-circle" width="32">
+                                <span class="ms-1 d-none d-sm-inline">John Doe</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <a class="dropdown-item" href="pages/settings.html">
+                                    <i class="bi bi-gear me-2"></i>Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="bi bi-person me-2"></i>Profile
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="pages/login.html">
+                                    <i class="bi bi-box-arrow-right me-2"></i>Logout
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div class="content">
+                <div class="container-fluid">
+                    <!-- Stats Cards -->
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Total Users
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">12,584</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-people fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Revenue
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$124,560</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-currency-dollar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                                Tasks
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">65%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-info" role="progressbar" 
+                                                             style="width: 65%" aria-valuenow="65" aria-valuemin="0" 
+                                                             aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-clipboard-check fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Pending Requests
+                                            </div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="bi bi-clock fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="row">
+                        <!-- Area Chart -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Overview</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                            <i class="bi bi-three-dots-vertical text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end shadow">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="revenueChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pie Chart -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Traffic Sources</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="trafficChart"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2">
+                                            <i class="bi bi-circle-fill text-primary"></i> Direct
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="bi bi-circle-fill text-success"></i> Social
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="bi bi-circle-fill text-info"></i> Referral
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Recent Activity</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="activity-timeline">
+                                        <div class="activity-item d-flex">
+                                            <div class="activity-icon bg-primary text-white rounded-circle">
+                                                <i class="bi bi-person-plus"></i>
+                                            </div>
+                                            <div class="activity-content ms-3">
+                                                <h6 class="mb-1">New user registered</h6>
+                                                <p class="text-muted mb-0">John Doe joined the platform</p>
+                                                <small class="text-muted">5 minutes ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="activity-item d-flex mt-3">
+                                            <div class="activity-icon bg-success text-white rounded-circle">
+                                                <i class="bi bi-credit-card"></i>
+                                            </div>
+                                            <div class="activity-content ms-3">
+                                                <h6 class="mb-1">Payment received</h6>
+                                                <p class="text-muted mb-0">$2,500 from Client ABC</p>
+                                                <small class="text-muted">1 hour ago</small>
+                                            </div>
+                                        </div>
+                                        <div class="activity-item d-flex mt-3">
+                                            <div class="activity-icon bg-warning text-white rounded-circle">
+                                                <i class="bi bi-exclamation-triangle"></i>
+                                            </div>
+                                            <div class="activity-content ms-3">
+                                                <h6 class="mb-1">Server alert</h6>
+                                                <p class="text-muted mb-0">High CPU usage detected</p>
+                                                <small class="text-muted">2 hours ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects Table -->
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow">
+                                <div class="card-header py-3 d-flex justify-content-between align-items-center">
+                                    <h6 class="m-0 font-weight-bold text-primary">Recent Projects</h6>
+                                    <a href="pages/projects.html" class="btn btn-sm btn-primary">View All</a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Project</th>
+                                                    <th>Team</th>
+                                                    <th>Status</th>
+                                                    <th>Progress</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Website Redesign</td>
+                                                    <td>Design Team</td>
+                                                    <td><span class="badge bg-success">Completed</span></td>
+                                                    <td>
+                                                        <div class="progress" style="height: 6px;">
+                                                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Mobile App</td>
+                                                    <td>Dev Team</td>
+                                                    <td><span class="badge bg-warning">In Progress</span></td>
+                                                    <td>
+                                                        <div class="progress" style="height: 6px;">
+                                                            <div class="progress-bar bg-warning" style="width: 65%"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>API Integration</td>
+                                                    <td>Backend Team</td>
+                                                    <td><span class="badge bg-info">Planning</span></td>
+                                                    <td>
+                                                        <div class="progress" style="height: 6px;">
+                                                            <div class="progress-bar bg-info" style="width: 30%"></div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/charts.js"></script>
+</body>
+</html>
