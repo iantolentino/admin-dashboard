@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Admin Dashboard</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <!-- Sidebar content -->
+        </nav>
+
+        <div class="main">
+            <!-- Top Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+                <!-- Navbar content -->
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Settings</li>
+                </ol>
+            </nav>
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Settings Sidebar -->
+                        <div class="col-lg-3 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <nav class="nav flex-column settings-nav">
+                                        <a class="nav-link active" href="#profile" data-bs-toggle="tab">
+                                            <i class="bi bi-person me-2"></i>Profile
+                                        </a>
+                                        <a class="nav-link" href="#account" data-bs-toggle="tab">
+                                            <i class="bi bi-gear me-2"></i>Account
+                                        </a>
+                                        <a class="nav-link" href="#security" data-bs-toggle="tab">
+                                            <i class="bi bi-shield-lock me-2"></i>Security
+                                        </a>
+                                        <a class="nav-link" href="#notifications" data-bs-toggle="tab">
+                                            <i class="bi bi-bell me-2"></i>Notifications
+                                        </a>
+                                        <a class="nav-link" href="#billing" data-bs-toggle="tab">
+                                            <i class="bi bi-credit-card me-2"></i>Billing
+                                        </a>
+                                        <a class="nav-link" href="#appearance" data-bs-toggle="tab">
+                                            <i class="bi bi-palette me-2"></i>Appearance
+                                        </a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Settings Content -->
+                        <div class="col-lg-9">
+                            <div class="tab-content">
+                                <!-- Profile Tab -->
+                                <div class="tab-pane fade show active" id="profile">
+                                    <div class="card shadow">
+                                        <div class="card-header">
+                                            <h5 class="card-title mb-0">Profile Settings</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="firstName" class="form-label">First Name</label>
+                                                        <input type="text" class="form-control" id="firstName" value="John">
+                                                    </div>
+                                                    <div class="col-md-6 mb-3">
+                                                        <label for="lastName" class="form-label">Last Name</label>
+                                                        <input type="text" class="form-control" id="lastName" value="Doe">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="email" class="form-label">Email</label>
+                                                    <input type="email" class="form-control" id="email" value="john.doe@example.com">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="phone" class="form-label">Phone</label>
+                                                    <input type="tel" class="form-control" id="phone" value="+1 (555) 123-4567">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="bio" class="form-label">Bio</label>
+                                                    <textarea class="form-control" id="bio" rows="3">Senior Administrator with 5+ years of experience.</textarea>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Update Profile</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Account Tab -->
+                                <div class="tab-pane fade" id="account">
+                                    <div class="card shadow">
+                                        <div class="card-header">
+                                            <h5 class="card-title mb-0">Account Settings</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mb-4">
+                                                <h6>Language & Region</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label for="language" class="form-label">Language</label>
+                                                        <select class="form-select" id="language">
+                                                            <option selected>English</option>
+                                                            <option>Spanish</option>
+                                                            <option>French</option>
+                                                            <option>German</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="timezone" class="form-label">Timezone</label>
+                                                        <select class="form-select" id="timezone">
+                                                            <option selected>(UTC-05:00) Eastern Time</option>
+                                                            <option>(UTC-08:00) Pacific Time</option>
+                                                            <option>(UTC+00:00) Greenwich Mean Time</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h6>Data Preferences</h6>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="dataCollection" checked>
+                                                    <label class="form-check-label" for="dataCollection">
+                                                        Allow data collection for analytics
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="emailReports" checked>
+                                                    <label class="form-check-label" for="emailReports">
+                                                        Send weekly analytics reports
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="alert alert-warning">
+                                                <h6>Danger Zone</h6>
+                                                <p>Once you delete your account, there is no going back. Please be certain.</p>
+                                                <button class="btn btn-outline-danger">Delete Account</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Security Tab -->
+                                <div class="tab-pane fade" id="security">
+                                    <div class="card shadow">
+                                        <div class="card-header">
+                                            <h5 class="card-title mb-0">Security Settings</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mb-4">
+                                                <h6>Change Password</h6>
+                                                <form>
+                                                    <div class="mb-3">
+                                                        <label for="currentPassword" class="form-label">Current Password</label>
+                                                        <input type="password" class="form-control" id="currentPassword">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="newPassword" class="form-label">New Password</label>
+                                                        <input type="password" class="form-control" id="newPassword">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                                        <input type="password" class="form-control" id="confirmPassword">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Update Password</button>
+                                                </form>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h6>Two-Factor Authentication</h6>
+                                                <p>Add an extra layer of security to your account.</p>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="twoFactor">
+                                                    <label class="form-check-label" for="twoFactor">
+                                                        Enable Two-Factor Authentication
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h6>Active Sessions</h6>
+                                                <div class="list-group">
+                                                    <div class="list-group-item">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                <strong>Chrome on Windows</strong>
+                                                                <div class="text-muted">New York, USA • Current Session</div>
+                                                            </div>
+                                                            <button class="btn btn-sm btn-outline-danger">Logout</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="list-group-item">
+                                                        <div class="d-flex justify-content-between">
+                                                            <div>
+                                                                <strong>Safari on Mac</strong>
+                                                                <div class="text-muted">London, UK • 2 days ago</div>
+                                                            </div>
+                                                            <button class="btn btn-sm btn-outline-danger">Logout</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Notifications Tab -->
+                                <div class="tab-pane fade" id="notifications">
+                                    <div class="card shadow">
+                                        <div class="card-header">
+                                            <h5 class="card-title mb-0">Notification Preferences</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mb-4">
+                                                <h6>Email Notifications</h6>
+                                                <div class="form-check form-switch mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="emailProduct" checked>
+                                                    <label class="form-check-label" for="emailProduct">
+                                                        Product updates and announcements
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-switch mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="emailSecurity" checked>
+                                                    <label class="form-check-label" for="emailSecurity">
+                                                        Security notifications
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-switch mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="emailMarketing">
+                                                    <label class="form-check-label" for="emailMarketing">
+                                                        Marketing and promotional emails
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h6>Push Notifications</h6>
+                                                <div class="form-check form-switch mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="pushMessages" checked>
+                                                    <label class="form-check-label" for="pushMessages">
+                                                        Direct messages
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-switch mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="pushReminders">
+                                                    <label class="form-check-label" for="pushReminders">
+                                                        Reminders and alerts
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Billing Tab -->
+                                <div class="tab-pane fade" id="billing">
+                                    <div class="card shadow">
+                                        <div class="card-header">
+                                            <h5 class="card-title mb-0">Billing Information</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="card bg-light">
+                                                        <div class="card-body">
+                                                            <h6>Current Plan</h6>
+                                                            <h4 class="text-primary">Professional</h4>
+                                                            <p>$49/month</p>
+                                                            <button class="btn btn-outline-primary">Change Plan</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="card bg-light">
+                                                        <div class="card-body">
+                                                            <h6>Next Billing</h6>
+                                                            <p>December 15, 2024</p>
+                                                            <p class="h5">$49.00</p>
+                                                            <button class="btn btn-outline-secondary">Update Payment</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <h6>Payment Method</h6>
+                                                <div class="d-flex justify-content-between align-items-center p-3 border rounded">
+                                                    <div>
+                                                        <i class="bi bi-credit-card me-2"></i>
+                                                        <strong>Visa ending in 4242</strong>
+                                                        <div class="text-muted">Expires 12/2025</div>
+                                                    </div>
+                                                    <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Appearance Tab -->
+                                <div class="tab-pane fade" id="appearance">
+                                    <div class="card shadow">
+                                        <div class="card-header">
+                                            <h5 class="card-title mb-0">Appearance Settings</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="mb-4">
+                                                <h6>Theme</h6>
+                                                <div class="row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card theme-option" data-theme="light">
+                                                            <div class="card-body text-center">
+                                                                <i class="bi bi-sun display-6"></i>
+                                                                <div class="mt-2">Light</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card theme-option active" data-theme="dark">
+                                                            <div class="card-body text-center">
+                                                                <i class="bi bi-moon display-6"></i>
+                                                                <div class="mt-2">Dark</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="card theme-option" data-theme="auto">
+                                                            <div class="card-body text-center">
+                                                                <i class="bi bi-circle-half display-6"></i>
+                                                                <div class="mt-2">Auto</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h6>Accent Color</h6>
+                                                <div class="color-picker">
+                                                    <button class="color-option active" data-color="#4e73df" style="background-color: #4e73df;"></button>
+                                                    <button class="color-option" data-color="#1cc88a" style="background-color: #1cc88a;"></button>
+                                                    <button class="color-option" data-color="#36b9cc" style="background-color: #36b9cc;"></button>
+                                                    <button class="color-option" data-color="#f6c23e" style="background-color: #f6c23e;"></button>
+                                                    <button class="color-option" data-color="#e74a3b" style="background-color: #e74a3b;"></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <h6>Layout</h6>
+                                                <div class="form-check form-switch mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="fixedNavbar" checked>
+                                                    <label class="form-check-label" for="fixedNavbar">
+                                                        Fixed navbar
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-switch mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="fixedSidebar">
+                                                    <label class="form-check-label" for="fixedSidebar">
+                                                        Fixed sidebar
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/settings.js"></script>
+</body>
+</html>
