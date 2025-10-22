@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Admin Dashboard</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <style>
+        .docs-sidebar {
+            position: sticky;
+            top: 2rem;
+            height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+        .docs-content {
+            padding: 2rem 0;
+        }
+        .docs-section {
+            margin-bottom: 3rem;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 0.375rem;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+        }
+        .nav-link.active {
+            background-color: #e7f1ff;
+            border-left: 3px solid #0d6efd;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="sidebar">
+            <!-- Sidebar content from dashboard.html -->
+        </nav>
+
+        <div class="main">
+            <!-- Top Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+                <!-- Navbar content -->
+                <ol class="breadcrumb mb-0">
+                    <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Documentation</li>
+                </ol>
+            </nav>
+
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Documentation Sidebar -->
+                        <div class="col-lg-3">
+                            <div class="docs-sidebar">
+                                <nav class="nav flex-column">
+                                    <h6 class="text-uppercase text-muted mt-3 mb-2">Getting Started</h6>
+                                    <a class="nav-link" href="#introduction">Introduction</a>
+                                    <a class="nav-link" href="#installation">Installation</a>
+                                    <a class="nav-link" href="#quickstart">Quick Start</a>
+                                    
+                                    <h6 class="text-uppercase text-muted mt-4 mb-2">Customization</h6>
+                                    <a class="nav-link" href="#theming">Theming & Colors</a>
+                                    <a class="nav-link" href="#layout">Layout Options</a>
+                                    <a class="nav-link" href="#components">Components</a>
+                                    
+                                    <h6 class="text-uppercase text-muted mt-4 mb-2">Pages</h6>
+                                    <a class="nav-link" href="#dashboard">Dashboard</a>
+                                    <a class="nav-link" href="#users">Users Management</a>
+                                    <a class="nav-link" href="#analytics">Analytics</a>
+                                    <a class="nav-link" href="#projects">Projects</a>
+                                    <a class="nav-link" href="#inbox">Inbox</a>
+                                    <a class="nav-link" href="#calendar">Calendar</a>
+                                    <a class="nav-link" href="#files">File Manager</a>
+                                    <a class="nav-link" href="#invoice">Invoice</a>
+                                    
+                                    <h6 class="text-uppercase text-muted mt-4 mb-2">Advanced</h6>
+                                    <a class="nav-link" href="#api">API Integration</a>
+                                    <a class="nav-link" href="#deployment">Deployment</a>
+                                    <a class="nav-link" href="#support">Support</a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- Documentation Content -->
+                        <div class="col-lg-9">
+                            <div class="docs-content">
+                                <!-- Introduction -->
+                                <section id="introduction" class="docs-section">
+                                    <h1 class="display-4 mb-4">Admin Dashboard Documentation</h1>
+                                    <p class="lead">
+                                        A comprehensive guide to setting up and customizing your Admin Dashboard.
+                                    </p>
+                                    
+                                    <div class="alert alert-info">
+                                        <i class="bi bi-info-circle me-2"></i>
+                                        This documentation covers version 1.0 of the Admin Dashboard template.
+                                    </div>
+
+                                    <h3 class="mt-5">Overview</h3>
+                                    <p>
+                                        The Admin Dashboard is a responsive, professional admin template built with Bootstrap 5. 
+                                        It includes all essential components for building modern web applications.
+                                    </p>
+
+                                    <h4>Key Features</h4>
+                                    <ul>
+                                        <li>📱 Fully responsive design</li>
+                                        <li>🎨 Dark/Light mode support</li>
+                                        <li>📊 Multiple chart types (Chart.js)</li>
+                                        <li>👥 User management system</li>
+                                        <li>📅 Calendar with event management</li>
+                                        <li>📁 File manager with drag & drop</li>
+                                        <li>🧾 Invoice generation</li>
+                                        <li>⚡ Fast and lightweight</li>
+                                    </ul>
+                                </section>
+
+                                <!-- Installation -->
+                                <section id="installation" class="docs-section">
+                                    <h2>Installation</h2>
+                                    <p>Getting started with the Admin Dashboard is straightforward.</p>
+
+                                    <h4>Prerequisites</h4>
+                                    <ul>
+                                        <li>Basic knowledge of HTML, CSS, and JavaScript</li>
+                                        <li>A web server (local or remote)</li>
+                                        <li>Modern web browser</li>
+                                    </ul>
+
+                                    <h4>Quick Setup</h4>
+                                    <ol>
+                                        <li>Download or clone the project files</li>
+                                        <li>Upload to your web server</li>
+                                        <li>Open <code>index.html</code> in your browser</li>
+                                        <li>Start customizing!</li>
+                                    </ol>
+
+                                    <div class="code-block">
+                                        <pre><code>
+# Project Structure
+admin-dashboard/
+├── index.html
+├── pages/
+│   ├── dashboard.html
+│   ├── users.html
+│   └── ...
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── img/
+└── docs/
+    └── documentation.html
+                                        </code></pre>
+                                    </div>
+                                </section>
+
+                                <!-- Quick Start -->
+                                <section id="quickstart" class="docs-section">
+                                    <h2>Quick Start</h2>
+                                    <p>Learn how to quickly customize the dashboard for your needs.</p>
+
+                                    <h4>Changing Colors</h4>
+                                    <p>Edit the CSS variables in <code>assets/css/style.css</code>:</p>
+                                    <div class="code-block">
+                                        <pre><code>
+:root {
+    --primary-color: #4e73df;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+}
+                                        </code></pre>
+                                    </div>
+
+                                    <h4>Adding New Pages</h4>
+                                    <p>Create new HTML files in the <code>pages/</code> directory and follow the existing structure.</p>
+
+                                    <h4>Custom JavaScript</h4>
+                                    <p>Add your custom functionality in the appropriate JavaScript files or create new ones.</p>
+                                </section>
+
+                                <!-- Theming -->
+                                <section id="theming" class="docs-section">
+                                    <h2>Theming & Colors</h2>
+                                    <p>Customize the appearance of your dashboard with our flexible theming system.</p>
+
+                                    <h4>Color Scheme</h4>
+                                    <p>The dashboard uses a consistent color scheme defined in CSS variables:</p>
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card bg-primary text-white">
+                                                <div class="card-body text-center">
+                                                    Primary<br>#4e73df
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card bg-success text-white">
+                                                <div class="card-body text-center">
+                                                    Success<br>#1cc88a
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card bg-info text-white">
+                                                <div class="card-body text-center">
+                                                    Info<br>#36b9cc
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 mb-3">
+                                            <div class="card bg-warning text-dark">
+                                                <div class="card-body text-center">
+                                                    Warning<br>#f6c23e
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4>Dark Mode</h4>
+                                    <p>The dashboard includes built-in dark mode support. Users can toggle between themes.</p>
+                                    <div class="code-block">
+                                        <pre><code>
+// Toggle dark mode
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', function() {
+    document.documentElement.setAttribute('data-bs-theme', 
+        document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark'
+    );
+});
+                                        </code></pre>
+                                    </div>
+                                </section>
+
+                                <!-- Dashboard -->
+                                <section id="dashboard" class="docs-section">
+                                    <h2>Dashboard</h2>
+                                    <p>The main dashboard provides an overview of your application's key metrics.</p>
+
+                                    <h4>Components</h4>
+                                    <ul>
+                                        <li><strong>Stats Cards:</strong> Display key metrics with progress indicators</li>
+                                        <li><strong>Charts:</strong> Revenue overview and traffic sources</li>
+                                        <li><strong>Activity Timeline:</strong> Recent user activities</li>
+                                        <li><strong>Performance Metrics:</strong> System performance indicators</li>
+                                        <li><strong>Quick Actions:</strong> Direct links to important sections</li>
+                                    </ul>
+
+                                    <h4>Customizing Charts</h4>
+                                    <p>Modify chart data in <code>assets/js/charts.js</code>:</p>
+                                    <div class="code-block">
+                                        <pre><code>
+// Revenue Chart
+const revenueChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Jan', 'Feb', 'Mar', ...],
+        datasets: [{
+            label: 'Revenue',
+            data: [12000, 19000, 15000, ...],
+            borderColor: '#4e73df',
+            backgroundColor: 'rgba(78, 115, 223, 0.1)'
+        }]
+    }
+});
+                                        </code></pre>
+                                    </div>
+                                </section>
+
+                                <!-- API Integration -->
+                                <section id="api" class="docs-section">
+                                    <h2>API Integration</h2>
+                                    <p>Learn how to connect the dashboard to your backend API.</p>
+
+                                    <h4>Fetching Data</h4>
+                                    <p>Example of fetching user data:</p>
+                                    <div class="code-block">
+                                        <pre><code>
+async function loadUsers() {
+    try {
+        const response = await fetch('/api/users');
+        const users = await response.json();
+        renderUsers(users);
+    } catch (error) {
+        console.error('Error loading users:', error);
+        showToast('Failed to load users', 'error');
+    }
+}
+                                        </code></pre>
+                                    </div>
+
+                                    <h4>Real-time Updates</h4>
+                                    <p>For real-time features, consider using WebSockets or Server-Sent Events.</p>
+                                </section>
+
+                                <!-- Support -->
+                                <section id="support" class="docs-section">
+                                    <h2>Support</h2>
+                                    <p>Get help with the Admin Dashboard template.</p>
+
+                                    <h4>Documentation</h4>
+                                    <p>This documentation covers all major features. For specific questions:</p>
+                                    <ul>
+                                        <li>Check the code comments</li>
+                                        <li>Review existing implementations</li>
+                                        <li>Test in different browsers</li>
+                                    </ul>
+
+                                    <h4>Browser Support</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                                <tr>
+                                                    <th>Browser</th>
+                                                    <th>Version</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Chrome</td>
+                                                    <td>90+</td>
+                                                    <td><span class="badge bg-success">Supported</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Firefox</td>
+                                                    <td>88+</td>
+                                                    <td><span class="badge bg-success">Supported</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Safari</td>
+                                                    <td>14+</td>
+                                                    <td><span class="badge bg-success">Supported</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Edge</td>
+                                                    <td>91+</td>
+                                                    <td><span class="badge bg-success">Supported</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="alert alert-warning">
+                                        <i class="bi bi-exclamation-triangle me-2"></i>
+                                        For technical support, please contact: 
+                                        <a href="mailto:support@company.com">support@company.com</a>
+                                    </div>
+                                </section>
+
+                                <!-- Changelog -->
+                                <section class="docs-section">
+                                    <h2>Changelog</h2>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5>Version 1.0.0</h5>
+                                            <small class="text-muted">Released: December 2024</small>
+                                            <ul class="mt-2">
+                                                <li>Initial release</li>
+                                                <li>Complete admin dashboard template</li>
+                                                <li>All core pages and components</li>
+                                                <li>Dark/Light mode support</li>
+                                                <li>Responsive design</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Smooth scrolling for documentation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active nav link based on scroll position
+        const sections = document.querySelectorAll('.docs-section');
+        const navLinks = document.querySelectorAll('.docs-sidebar .nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
