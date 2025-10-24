@@ -395,3 +395,32 @@ body {
     border-color: #4a5568;
     background-color: #2d3748;
 }
+
+/* Mobile responsive fixes */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .main {
+        margin-left: 0;
+    }
+    
+    .sidebar.collapsed {
+        transform: translateX(-100%);
+    }
+}
+
+/* Ensure proper content area adjustment */
+.main {
+    transition: margin-left 0.3s ease;
+}
+
+.main.expanded {
+    margin-left: var(--sidebar-collapsed-width);
+}
