@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Manager - Admin Dashboard</title>
-    
+    <link rel="icon" href="../assets/img/logo.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -80,7 +80,69 @@
     <div class="wrapper">
         <!-- Sidebar -->
         <nav id="sidebar" class="sidebar">
-            <!-- Sidebar content -->
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-brand">
+                    <i class="bi bi-speedometer2"></i>
+                    <span>AdminKit</span>
+                </a>
+                <button class="btn btn-sm" id="sidebarToggle">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="sidebar-user">
+                       <img src="../assets/img/user-avatar.jpg" alt="User" class="rounded-circle">
+                    <div class="user-info">
+                        <span class="user-name">John Doe</span>
+                        <span class="user-role">Administrator</span>
+                    </div>
+                </div>
+            <ul class="sidebar-nav">
+    <li class="sidebar-item">
+        <a href="dashboard.html" class="sidebar-link">
+            <i class="bi bi-speedometer2"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
+    <li class="sidebar-item">
+        <a href="users.html" class="sidebar-link">
+            <i class="bi bi-people"></i>
+            <span>Users</span>
+        </a>
+    </li>
+    <li class="sidebar-item">
+        <a href="analytics.html" class="sidebar-link">
+            <i class="bi bi-graph-up"></i>
+            <span>Analytics</span>
+        </a>
+    </li>
+    <li class="sidebar-item">
+        <a href="projects.html" class="sidebar-link">
+            <i class="bi bi-folder"></i>
+            <span>Projects</span>
+        </a>
+    </li>
+    <li class="sidebar-item">
+        <a href="inbox.html" class="sidebar-link">
+            <i class="bi bi-inbox"></i>
+            <span>Inbox</span>
+            <span class="badge bg-danger">5</span>
+        </a>
+    </li>
+    <li class="sidebar-item">
+        <a href="calendar.html" class="sidebar-link">
+            <i class="bi bi-calendar"></i>
+            <span>Calendar</span>
+        </a>
+    </li>
+    <li class="sidebar-item">
+        <a href="file-manager.html" class="sidebar-link">
+            <i class="bi bi-files"></i>
+            <span>File Manager</span>
+        </a>
+    </li>
+</ul>
         </nav>
 
         <div class="main">
