@@ -37,7 +37,3 @@ A professional, responsive admin dashboard built with Bootstrap 5.
 ## License
 
 MIT License - feel free to use in personal and commercial projects.
-
-okay ill do it again, and donot overthink too much
-
-the sending of files is limited to 10 thats why im spliting them every reply, now you need to collect my files until i say ALLSENT, ill just send files 10 at a time you reply only with a NOTED then ill send again the files until i finish sending them then telling the word ALLSENT
